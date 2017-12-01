@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 	del = require('del'),
 	imagemin = require('gulp-imagemin'),
 	pngquant = require('imagemin-pngquant'),
-	gulpif = require('gulp-if'),dsdsd
+	gulpif = require('gulp-if'),
 	wiredep = require('gulp-wiredep'),
 	useref = require('gulp-useref');
 
