@@ -1,0 +1,36 @@
+{
+  "name": "xalk-font-awesome",
+  "description": "Font Awesome",
+  "keywords": [],
+  "homepage": "http://fontawesome.io",
+  "dependencies": {},
+  "devDependencies": {},
+  "license": [
+    "OFL-1.1",
+    "MIT",
+    "CC-BY-3.0"
+  ],
+  "main": [
+    "css/font-awesome.css"
+  ],
+  "ignore": [
+    "*/.*",
+    "*.json",
+    "src",
+    "*.yml",
+    "Gemfile",
+    "Gemfile.lock",
+    "*.md"
+  ],
+  "version": "0.0.1",
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.1",
+    "commit": "1e9a6abd51d91bc5b247cb6bfddf811d22aced9b"
+  },
+  "_source": "https://github.com/xalkovich/xalk-font-awesome.git",
+  "_target": "^0.0.1",
+  "_originalSource": "xalk-font-awesome",
+  "_direct": true
+}

@@ -1,0 +1,23 @@
+{
+  "name": "bower",
+  "description": "bower",
+  "main": "index.js",
+  "authors": [
+    "Kirill"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "xalk-font-awesome": "^0.0.1",
+    "normalize-css": "normalize.css#^7.0.0",
+    "animate.css": "^3.5.2"
+  }
+}
