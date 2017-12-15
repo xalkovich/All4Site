@@ -1,21 +1,78 @@
 // ==========  Desktop First  ==========
 
- // Large Devices, Wide Screens
-@media only screen and (max-width: 1200px)
- 	// 
+// Large Devices, Wide Screens
+@media only screen and (max-width: 1280px)
+	.portfolio
+		.portfolioimg
+			.img
+				grid-column: span 2
+	.dosite
+		.boxcontainer
+			.arrow::after
+				width: 52%
+			.babletop
+				align-self: center
+			.bablebottom
+				align-self: center
 
 // Medium Devices, Desktops
-@media only screen and (max-width: 992px)
- 	// 
-
+@media only screen and (max-width: 1024px)
+	// 
 // Small Devices, Tablets
 @media only screen and (max-width: 768px)
-	// 
-
+	.header
+		h1
+			font-size: 3.5em
+		h3
+			grid-column: 3/7
+							justify-self: end
+	.section
+		grid-template-rows: repeat(3, auto)
+		h2
+			grid-row: 1
+		article
+			grid-row: 3
+			grid-column: 2/span 10
+		.photo
+			grid-row: 2
+			grid-column: span 12
+			justify-self: center
+		.hrwert
+			display: none
+	.portfolio
+		grid-column: span 12
+		.portfolioimg
+			grid-column: span 12
+			.img
+				grid-column: span 4
 // Extra Small Devices, Phones
-@media only screen and (max-width: 480px)
-	//
-
- // Custom, iPhone Retina
+@media only screen and (max-width: 520px)
+	.header
+		// background: url('../img/header320.jpeg')
+		.link
+			display: none
+		h1
+			grid-column: span 12
+			text-align: center
+		h3
+			grid-column: span 12
+			justify-self: center
+// Custom, iPhone Retina
 @media only screen and (max-width: 320px)
-	// 
+	.header
+		background: url('../img/header320.jpeg')
+		.link
+			display: none
+		h1
+			grid-column: span 12
+			text-align: center
+		h3
+			grid-column: span 12
+			justify-self: cente
+	.section
+		h2
+			margin: 
+	.portfolio
+		h2
+			text-align: center
+			margin: 0
