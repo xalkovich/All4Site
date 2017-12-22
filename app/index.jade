@@ -4,7 +4,6 @@ html(lang="en")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
-		//- link(href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic-ext" rel="stylesheet")
 		// build:css css/main.min.css
 		// bower:css
 		link(rel='stylesheet', href='js/xalk-font-awesome/css/font-awesome.css')
@@ -21,11 +20,15 @@ html(lang="en")
 			include _content
 			include _portfolio
 			include _dosite
+			include _costs
+			br
+			include _contact
 
 
 		// build:js js/main.min.js
 		// bower:js
 		script(src='js/jquery/dist/jquery.js')
+		script(src='js/wow/dist/wow.js')
 		// endbower
 		script(src="js/main.js")
 		// endbuild

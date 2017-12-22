@@ -56,7 +56,7 @@ gulp.task('img', function () {
 });
 
 gulp.task('sass', function () {
-	return gulp.src('app/sass/**/*.sass')
+	return gulp.src('app/sass/main.min.sass')
 		.pipe(sass.sync())
 		.on('error', notify.onError({
 			message: "<%= error.message %>",

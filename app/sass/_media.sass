@@ -1,6 +1,3 @@
-// ==========  Desktop First  ==========
-
-// Large Devices, Wide Screens
 @media only screen and (max-width: 1280px)
 	.portfolio
 		.portfolioimg
@@ -10,22 +7,35 @@
 		.boxcontainer
 			.arrow::after
 				width: 52%
-			.babletop
-				align-self: center
-			.bablebottom
-				align-self: center
-
-// Medium Devices, Desktops
+			.bable
+				&:nth-of-type(2n+1)::after
+					top: 88%
+					left: 10%
+				&:nth-of-type(2n)::after
+					bottom: 88%
+					right: 10%
+	.costs
+		.costsall
+			h2
+				font-size: 1.3em
 @media only screen and (max-width: 1024px)
-	// 
-// Small Devices, Tablets
-@media only screen and (max-width: 768px)
+	.dosite
+		.boxcontainer
+			.bable
+				&:nth-of-type(2n+1)::after
+					top: 85%
+					left: 0
+				&:nth-of-type(2n)::after
+					bottom: 85%
+					right: 0
+	.costs
+		.costsall
+			h2
+				font-size: 1em
+@media only screen and (max-width: 600px)
 	.header
 		h1
 			font-size: 3.5em
-		h3
-			grid-column: 3/7
-							justify-self: end
 	.section
 		grid-template-rows: repeat(3, auto)
 		h2
@@ -37,6 +47,8 @@
 			grid-row: 2
 			grid-column: span 12
 			justify-self: center
+			img
+				width: 300px
 		.hrwert
 			display: none
 	.portfolio
@@ -45,7 +57,96 @@
 			grid-column: span 12
 			.img
 				grid-column: span 4
-// Extra Small Devices, Phones
+	.dosite
+		background: url('../img/steps2.png')
+		h2
+			font-size: 2.5em
+		.boxcontainer
+			grid-template-columns: repeat(2, 1fr)
+			grid-template-rows: repeat(7, 1fr)
+			margin-bottom: 5%
+			.box:nth-of-type(2)
+				grid-column: 1
+				grid-row: 1
+			.box:nth-of-type(5)
+				grid-column: 1
+				grid-row: 3
+			.box:nth-of-type(8)
+				grid-column: 1
+				grid-row: 5
+			.box:nth-of-type(11)
+				grid-column: 1
+				grid-row: 7
+			.bable
+				justify-self: center !important
+				align-self: auto
+				width: 80%
+				height: 120px
+				&::after
+					transform: rotate(180deg) !important
+					left: -40% !important
+					top: 5% !important
+			.bable:nth-of-type(1)
+				grid-column: 2
+				grid-row: 1
+			.bable:nth-of-type(4)
+				grid-column: 2
+				grid-row: 3
+			.bable:nth-of-type(7)
+				grid-column: 2
+				grid-row: 5
+			.bable:nth-of-type(10)
+				grid-column: 2
+				grid-row: 7
+			.arrow
+				transform: rotate(90deg)
+				grid-column: span 2
+				margin-right: 0
+			.arrow:nth-of-type(3)
+				grid-row: 2
+			.arrow:nth-of-type(6)
+				grid-row: 4
+			.arrow:nth-of-type(9)
+				grid-row: 6
+	.costs
+		grid-template-rows: min-content 1fr 1fr
+		grid-template-columns: 1fr 5px 1fr
+		margin: 10px
+		grid-column-gap: 0
+		grid-row-gap: 5px
+		h2
+			grid-row: 1
+		.costsall:nth-of-type(1)
+			grid-column: 1
+			grid-row: 2
+		.costsall:nth-of-type(2)
+			grid-column: 3
+			grid-row: 2
+		.costsall:nth-of-type(3)
+			grid-row: 3
+			grid-column: 1
+		.costsall:nth-of-type(4)
+			grid-row: 3
+			grid-column: 3
+	.contact
+		.address
+			width: 90%
+			grid-column-gap: 10px
+		.contactbox
+			margin: 10px
+			.feedback
+				width: 100%
+		footer
+			font-size: 0.9em
+			justify-items: center
+			span:nth-of-type(1)
+				grid-column: span 3
+			span:nth-of-type(2)
+				grid-column: span 3
+			span:nth-of-type(3)
+				grid-column: span 3
+			.cosial
+				grid-column: span 3
 @media only screen and (max-width: 520px)
 	.header
 		// background: url('../img/header320.jpeg')
@@ -57,7 +158,6 @@
 		h3
 			grid-column: span 12
 			justify-self: center
-// Custom, iPhone Retina
 @media only screen and (max-width: 320px)
 	.header
 		background: url('../img/header320.jpeg')
@@ -75,4 +175,65 @@
 	.portfolio
 		h2
 			text-align: center
+			margin: 
+	.dosite
+		h2
+			text-align: center
+		.boxcontainer
+			.bable
+				display: none
+			.box	
+				grid-column: span 2 !important
+				height: auto
+				h1
+					align-self: start	
+				span
+					display: block
+	.costs
+		grid-template-columns: 1fr
+		grid-template-rows: 1fr
+		h2
+			grid-column: span 6
+		.costsall:nth-of-type(1)
+			grid-column: 1
+			grid-row: 2
+		.costsall:nth-of-type(2)
+			grid-column: 1
+			grid-row: 3
+		.costsall:nth-of-type(3)
+			grid-column: 1
+			grid-row: 4
+		.costsall:nth-of-type(4)
+			grid-column: 1
+			grid-row: 5
+	.contact
+		.contactbox
+			grid-template-rows: 1fr repeat(2, min-content)
+			grid-template-columns: 1fr
+			.address
+				grid-row: 3
+				grid-column: 1
+			.hrfeedback
+				grid-row: 2
+				grid-column: 1
+				width: 100%
+				height: 1px
+				margin: 10px 0
+			.feedback
+				grid-row: 1
+				grid-column: 1
+				input[type="button"]
+					justify-self: center
+		footer
 			margin: 0
+			font-size: 0.6em
+			.cosial
+				display: none
+			span:nth-of-type(1)
+				grid-column: span 4
+			span:nth-of-type(2)
+				grid-column: span 4
+				justify-self: center
+			span:nth-of-type(3)
+				grid-column: span 4
+
