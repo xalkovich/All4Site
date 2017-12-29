@@ -1,9 +1,11 @@
 @import fonts
 @import base
 @import vars
+@import circle
+
 
 h2
-	margin: 0
+	margin: 0\2
 	margin-bottom: 10px
 	text-transform: uppercase
 .wrapper
@@ -27,6 +29,21 @@ h2
 			text-transform: uppercase
 			color: $white
 			padding-left: 20px
+			transition: 0.5s
+			&:hover
+				color: $darc
+		a[href="#top"]
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				width: 90%
+				height: 5%
+				bottom: -10%
+				left: 14%
+				background: $white
+
+
 	h1
 		grid-column: span 12
 		grid-row: 3

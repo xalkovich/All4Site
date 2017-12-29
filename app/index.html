@@ -17,12 +17,12 @@
   </head>
   <body>
     <wrapper class="wrapper grid">
-      <header class="header grid">
-        <div class="link"><a href="#">главная</a></div>
-        <div class="link"><a href="#">контакты</a></div>
-        <div class="link"><a href="#">статьи</a></div>
-        <h1>we are creator
-          <h3>all4site</h3>
+      <header id="top" class="header grid">
+        <div class="link"><a href="#top" class="active">главная</a></div>
+        <div class="link"><a href="#contact">контакты</a></div>
+        <div class="link"><a href="">статьи</a></div>
+        <h1 data-wow-iteration="2" class="wow pulse">we are creator
+          <h3 data-wow-iteration="2" class="wow bounce">all4site</h3>
         </h1>
       </header>
       <section class="section grid">
@@ -37,67 +37,70 @@
         <div class="photo wow bounceInRight"><img src="img/ME.png" alt=""/></div>
         <div class="hrgor">
           <hr/>
-        </div>
+        </div><a href="#top">
+          <div class="circle grid">
+            <div class="circleimg"></div>
+          </div></a>
       </section>
       <section class="portfolio grid">
         <h2>наши работы</h2>
         <div class="portfolioimg grid">
-          <div class="img"><img src="img/portfolio1.jpeg" alt=""/></div>
-          <div class="img"><img src="img/portfolio2.jpeg" alt=""/></div>
-          <div class="img"><img src="img/portfolio3.jpeg" alt=""/></div>
-          <div class="img"><img src="img/portfolio4.jpeg" alt=""/></div>
-          <div class="img"><img src="img/portfolio5.jpeg" alt=""/></div>
-          <div class="img"><img src="img/portfolio6.jpeg" alt=""/></div>
+          <div class="img wow zoomIn"><img src="img/portfolio1.jpeg" alt=""/></div>
+          <div class="img wow zoomIn"><img src="img/portfolio2.jpeg" alt=""/></div>
+          <div class="img wow zoomIn"><img src="img/portfolio3.jpeg" alt=""/></div>
+          <div class="img wow zoomIn"><img src="img/portfolio4.jpeg" alt=""/></div>
+          <div class="img wow zoomIn"><img src="img/portfolio5.jpeg" alt=""/></div>
+          <div class="img wow zoomIn"><img src="img/portfolio6.jpeg" alt=""/></div>
         </div>
       </section>
       <section class="dosite grid">
         <h2>сделать сайт это просто</h2>
         <div class="boxcontainer grid">
-          <div class="bable">
+          <div class="bable wow fadeIn">
             <ol>
               <li>Встреча с клиентом</li>
               <li>Черновой набросок макета</li>
               <li>Подбор цветов</li>
             </ol>
           </div>
-          <div class="box">
+          <div class="box wow bounceInLeft">
             <h2>1</h2><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, rem.</span>
           </div>
           <div class="arrow"></div>
-          <div class="bable">
+          <div class="bable wow fadeIn">
             <ol>
               <li>Создание макета</li>
               <li>Утверждение макета</li>
             </ol>
           </div>
-          <div class="box">
+          <div class="box wow bounceInUp">
             <h2>2</h2>
           </div>
           <div class="arrow"></div>
-          <div class="bable">
+          <div class="bable wow fadeIn">
             <ol>
               <li>Программирование сайта</li>
             </ol>
           </div>
-          <div class="box">
+          <div class="box wow bounceInDown">
             <h2>3</h2>
           </div>
           <div class="arrow"></div>
-          <div class="bable">
+          <div class="bable wow fadeIn">
             <ol>
               <li>Проверка сайта</li>
               <li>Внесение правок</li>
               <li>Сдача проэкта</li>
             </ol>
           </div>
-          <div class="box">
+          <div class="box wow bounceInRight">
             <h2>4</h2>
           </div>
         </div>
       </section>
       <div class="costs grid">
         <h2>цены</h2>
-        <div class="costsall grid">
+        <div data-wow-delay="0.5s" class="costsall grid wow fadeIn">
           <h2>сайт <br/>визитка</h2>
           <hr class="hr1"/><span>2000<br/>	грн		</span>
           <hr class="hr2"/>
@@ -106,9 +109,9 @@
             <li>asdasdas</li>
             <li>asdasdasd</li>
           </ol>
-          <input type="button" value="заказать"/>
+          <input data-wow-delay="3s" data-wow-iteration="2" type="button" value="заказать" class="wow pulse"/>
         </div>
-        <div class="costsall grid">
+        <div data-wow-delay="1s" class="costsall grid wow fadeIn">
           <h2>landing <br/>page</h2>
           <hr class="hr1"/><span>2000<br/>	грн		</span>
           <hr class="hr2"/>
@@ -119,9 +122,9 @@
             <li>asdasdasd</li>
             <li>asdasdasd</li>
           </ol>
-          <input type="button" value="заказать"/>
+          <input data-wow-delay="3s" data-wow-iteration="2" type="button" value="заказать" class="wow pulse"/>
         </div>
-        <div class="costsall grid">
+        <div data-wow-delay="1.5s" class="costsall grid wow fadeIn">
           <h2>корпоративный <br/>сайт</h2>
           <hr class="hr1"/><span>2000<br/>	грн		</span>
           <hr class="hr2"/>
@@ -131,9 +134,9 @@
             <li>asdasdasd</li>
             <li>asdasdasd</li>
           </ol>
-          <input type="button" value="заказать"/>
+          <input data-wow-delay="3s" data-wow-iteration="2" type="button" value="заказать" class="wow pulse"/>
         </div>
-        <div class="costsall grid">
+        <div data-wow-delay="2s" class="costsall grid wow fadeIn">
           <h2>интернет <br/>магазин</h2>
           <hr class="hr1"/><span>2000<br/>	грн		</span>
           <hr class="hr2"/>
@@ -145,13 +148,13 @@
             <li>asdasdasd</li>
             <li>asdasdasd</li>
           </ol>
-          <input type="button" value="заказать"/>
+          <input data-wow-delay="3s" data-wow-iteration="2" type="button" value="заказать" class="wow pulse"/>
         </div>
       </div><br/>
-      <div class="contact grid">
+      <div id="contact" class="contact grid">
         <h2>контакты</h2>
         <div class="contactbox grid">
-          <div class="address grid"><span>Email: </span><span class="class1">	info@all4site.com.ua</span><span>Телефон: </span><span class="class1">	093-606-34-15</span><span>Facebook: </span>
+          <div class="address grid"><span>Email: </span><span class="class1">info@all4site.com.ua</span><span>Телефон: </span><span class="class1">093-606-34-15</span><span>Facebook: </span>
             <div class="fa fa-facebook"></div><span>Google+: </span>
             <div class="fa fa-google-plus"></div><span>Linked: </span>
             <div class="fa fa-linkedin"></div>

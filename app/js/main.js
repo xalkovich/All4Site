@@ -1,12 +1,21 @@
 new WOW().init();
 
-window.addEventListener('scroll', function(e) {
-        if( $(".section").scrollTop() <= 100) {
-            $('.wow').removeClass('animated');
-            $('.wow').removeAttr('style');
-            new WOW().init();
-        }
+$(document).ready(function(){
+	$(window).scroll(function(){
+		var top = ($(document).scrollTop());
+	if (top >= 300) {
+		$('.circle').css('opacity','1');
+	}
+	else{
+		$('.circle').css('opacity','0');
+	}
+	});
+	
 });
 
-console.log($(".section").scrollTop());
-
+$(document).ready(function() {
+    $('a[href^="#"]').click(function() {
+        var target = $(this).attr('href');
+        $('html, body').animate({ scrollTop: $(target).offset().top - 90 }, 1000);
+    });
+});

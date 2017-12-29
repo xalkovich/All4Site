@@ -107,6 +107,7 @@ gulp.task('default', ['browser-sync', 'jade','bower'], function () {
 	gulp.watch('app/sass/*.sass', ['sass']);
 	gulp.watch('app/*.jade', ['jade']);
 	gulp.watch('app/*.html', browserSync.reload);
+	gulp.watch('app/**/*.css', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 	gulp.watch('bower.json', ['bower']);
 });

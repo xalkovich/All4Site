@@ -53,8 +53,29 @@ h5 {
 h6 {
   font-size: 1.6rem; }
 
+.circle {
+  opacity: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  background: #afb2b7;
+  -webkit-transition: 1s;
+  transition: 1s; }
+  .circle:hover {
+    background: #7f8084; }
+  .circle .circleimg {
+    background: url("../img/up-arrow.svg");
+    width: 40px;
+    height: 40px;
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center; }
+
 h2 {
-  margin: 0;
+  margin: 0\2;
   margin-bottom: 10px;
   text-transform: uppercase; }
 
@@ -81,7 +102,21 @@ h2 {
       text-decoration: none;
       text-transform: uppercase;
       color: #fff;
-      padding-left: 20px; }
+      padding-left: 20px;
+      -webkit-transition: 0.5s;
+      transition: 0.5s; }
+      .header .link a:hover {
+        color: #262526; }
+    .header .link a[href="#top"] {
+      position: relative; }
+      .header .link a[href="#top"]::after {
+        content: '';
+        position: absolute;
+        width: 90%;
+        height: 5%;
+        bottom: -10%;
+        left: 14%;
+        background: #fff; }
   .header h1 {
     grid-column: span 12;
     grid-row: 3;
