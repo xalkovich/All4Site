@@ -1,0 +1,47 @@
+.mfp-container
+	display: grid
+	grid-template-columns: 1fr
+.mfp-content
+	grid-column: 1
+input[type="hidden"]
+	display: none
+#order1,
+#order2,
+#order3,
+#order4
+	height: 50vh
+	background: $accentminus
+	margin-left: 32%
+	margin-right: 33%
+	text-align: center
+	color: $darc
+	position: relative
+	.mfp-close
+		position: absolute
+		display: none
+	h3
+		margin: 0
+		padding: 0
+		text-transform: uppercase
+		height: 10px
+	.feedback
+		grid-template-rows: repeat(4, min-content)
+		grid-row-gap: 5px
+		width: 90%
+		justify-self: center
+		margin-bottom: 1%
+		input
+			padding: 5px
+			color: $accent
+			border: none
+		textarea
+			height: 200px
+			color: $accent
+			border: none
+			&::placeholder
+				padding: 5px
+		input[type="submit"]
+			// width: 150px
+			// justify-self: end
+			color: $accent
+			background: $white

@@ -19,6 +19,7 @@
     "xalk-font-awesome": "^0.0.1",
     "normalize-css": "normalize.css#^7.0.0",
     "animate.css": "^3.5.2",
-    "wow": "^1.1.2"
+    "wow": "^1.1.2",
+    "magnific-popup": "^1.1.0"
   }
 }

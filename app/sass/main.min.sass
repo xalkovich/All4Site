@@ -2,7 +2,10 @@
 @import base
 @import vars
 @import circle
+@import order
 
+textarea
+	resize: none
 
 h2
 	margin: 0\2
@@ -32,16 +35,6 @@ h2
 			transition: 0.5s
 			&:hover
 				color: $darc
-		a[href="#top"]
-			position: relative
-			&::after
-				content: ''
-				position: absolute
-				width: 90%
-				height: 5%
-				bottom: -10%
-				left: 14%
-				background: $white
 
 
 	h1
@@ -241,17 +234,19 @@ h2
 			font-size: 2em
 		ol
 			grid-row: 5
-		input[type="button"]
+		a
 			grid-row: 6
 			grid-column: span 6
 			justify-self: center
 			margin-top: 10%
 			margin-bottom: 10%
-			padding: 3% 20%
 			background: $darc
 			color: $lightplus
 			text-transform: uppercase
 			border: none
+			padding: 3% 20%
+			cursor: pointer
+			text-decoration: none
 		.hr1
 			background: #262526
 			border: none

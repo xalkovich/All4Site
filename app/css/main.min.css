@@ -74,6 +74,95 @@ h6 {
     -ms-flex-item-align: center;
         align-self: center; }
 
+.mfp-container {
+  display: grid;
+  grid-template-columns: 1fr; }
+
+.mfp-content {
+  grid-column: 1; }
+
+input[type="hidden"] {
+  display: none; }
+
+#order1,
+#order2,
+#order3,
+#order4 {
+  height: 50vh;
+  background: #afb2b7;
+  margin-left: 32%;
+  margin-right: 33%;
+  text-align: center;
+  color: #262526;
+  position: relative; }
+  #order1 .mfp-close,
+  #order2 .mfp-close,
+  #order3 .mfp-close,
+  #order4 .mfp-close {
+    position: absolute;
+    display: none; }
+  #order1 h3,
+  #order2 h3,
+  #order3 h3,
+  #order4 h3 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    height: 10px; }
+  #order1 .feedback,
+  #order2 .feedback,
+  #order3 .feedback,
+  #order4 .feedback {
+    grid-template-rows: repeat(4, -webkit-min-content);
+    grid-template-rows: repeat(4, min-content);
+    grid-row-gap: 5px;
+    width: 90%;
+    justify-self: center;
+    margin-bottom: 1%; }
+    #order1 .feedback input,
+    #order2 .feedback input,
+    #order3 .feedback input,
+    #order4 .feedback input {
+      padding: 5px;
+      color: #7f8084;
+      border: none; }
+    #order1 .feedback textarea,
+    #order2 .feedback textarea,
+    #order3 .feedback textarea,
+    #order4 .feedback textarea {
+      height: 200px;
+      color: #7f8084;
+      border: none; }
+      #order1 .feedback textarea::-webkit-input-placeholder,
+      #order2 .feedback textarea::-webkit-input-placeholder,
+      #order3 .feedback textarea::-webkit-input-placeholder,
+      #order4 .feedback textarea::-webkit-input-placeholder {
+        padding: 5px; }
+      #order1 .feedback textarea:-ms-input-placeholder,
+      #order2 .feedback textarea:-ms-input-placeholder,
+      #order3 .feedback textarea:-ms-input-placeholder,
+      #order4 .feedback textarea:-ms-input-placeholder {
+        padding: 5px; }
+      #order1 .feedback textarea::-ms-input-placeholder,
+      #order2 .feedback textarea::-ms-input-placeholder,
+      #order3 .feedback textarea::-ms-input-placeholder,
+      #order4 .feedback textarea::-ms-input-placeholder {
+        padding: 5px; }
+      #order1 .feedback textarea::placeholder,
+      #order2 .feedback textarea::placeholder,
+      #order3 .feedback textarea::placeholder,
+      #order4 .feedback textarea::placeholder {
+        padding: 5px; }
+    #order1 .feedback input[type="submit"],
+    #order2 .feedback input[type="submit"],
+    #order3 .feedback input[type="submit"],
+    #order4 .feedback input[type="submit"] {
+      color: #7f8084;
+      background: #fff; }
+
+textarea {
+  resize: none; }
+
 h2 {
   margin: 0\2;
   margin-bottom: 10px;
@@ -107,16 +196,6 @@ h2 {
       transition: 0.5s; }
       .header .link a:hover {
         color: #262526; }
-    .header .link a[href="#top"] {
-      position: relative; }
-      .header .link a[href="#top"]::after {
-        content: '';
-        position: absolute;
-        width: 90%;
-        height: 5%;
-        bottom: -10%;
-        left: 14%;
-        background: #fff; }
   .header h1 {
     grid-column: span 12;
     grid-row: 3;
@@ -331,17 +410,19 @@ h2 {
       font-size: 2em; }
     .costs .costsall ol {
       grid-row: 5; }
-    .costs .costsall input[type="button"] {
+    .costs .costsall a {
       grid-row: 6;
       grid-column: span 6;
       justify-self: center;
       margin-top: 10%;
       margin-bottom: 10%;
-      padding: 3% 20%;
       background: #262526;
       color: #d7d8da;
       text-transform: uppercase;
-      border: none; }
+      border: none;
+      padding: 3% 20%;
+      cursor: pointer;
+      text-decoration: none; }
     .costs .costsall .hr1 {
       background: #262526;
       border: none;

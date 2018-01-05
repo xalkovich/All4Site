@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="js/xalk-font-awesome/css/font-awesome.css"/>
     <link rel="stylesheet" href="js/normalize-css/normalize.css"/>
     <link rel="stylesheet" href="js/animate.css/animate.css"/>
+    <link rel="stylesheet" href="js/magnific-popup/dist/magnific-popup.css"/>
     <!-- endbower-->
     <link rel="stylesheet" href="css/main.min.css"/>
     <!-- endbuild-->
@@ -20,7 +21,7 @@
       <header id="top" class="header grid">
         <div class="link"><a href="#top" class="active">главная</a></div>
         <div class="link"><a href="#contact">контакты</a></div>
-        <div class="link"><a href="">статьи</a></div>
+        <div class="link"><a href="#costs">Цены</a></div>
         <h1 data-wow-iteration="2" class="wow pulse">we are creator
           <h3 data-wow-iteration="2" class="wow bounce">all4site</h3>
         </h1>
@@ -98,7 +99,7 @@
           </div>
         </div>
       </section>
-      <div class="costs grid">
+      <div id="costs" class="costs grid">
         <h2>цены</h2>
         <div data-wow-delay="0.5s" class="costsall grid wow fadeIn">
           <h2>сайт <br/>визитка</h2>
@@ -108,8 +109,7 @@
             <li>asdasd</li>
             <li>asdasdas</li>
             <li>asdasdasd</li>
-          </ol>
-          <input data-wow-delay="3s" data-wow-iteration="2" type="button" value="заказать" class="wow pulse"/>
+          </ol><a href="#order1" class="order">заказать</a>
         </div>
         <div data-wow-delay="1s" class="costsall grid wow fadeIn">
           <h2>landing <br/>page</h2>
@@ -121,8 +121,7 @@
             <li>asdasdasd</li>
             <li>asdasdasd</li>
             <li>asdasdasd</li>
-          </ol>
-          <input data-wow-delay="3s" data-wow-iteration="2" type="button" value="заказать" class="wow pulse"/>
+          </ol><a href="#order2" class="order">заказать</a>
         </div>
         <div data-wow-delay="1.5s" class="costsall grid wow fadeIn">
           <h2>корпоративный <br/>сайт</h2>
@@ -133,8 +132,7 @@
             <li>asdasdas</li>
             <li>asdasdasd</li>
             <li>asdasdasd</li>
-          </ol>
-          <input data-wow-delay="3s" data-wow-iteration="2" type="button" value="заказать" class="wow pulse"/>
+          </ol><a href="#order3" class="order">заказать</a>
         </div>
         <div data-wow-delay="2s" class="costsall grid wow fadeIn">
           <h2>интернет <br/>магазин</h2>
@@ -147,10 +145,52 @@
             <li>asdasdasd</li>
             <li>asdasdasd</li>
             <li>asdasdasd</li>
-          </ol>
-          <input data-wow-delay="3s" data-wow-iteration="2" type="button" value="заказать" class="wow pulse"/>
+          </ol><a href="#order4" class="order">заказать</a>
         </div>
-      </div><br/>
+      </div>
+      <form id="order1" class="grid mfp-hide">
+        <input type="hidden" name="project_name" value="All4site.com.ua"/>
+        <input type="hidden" name="admin_email" value="admin@mail.com"/>
+        <input type="hidden" name="form_subject" value="Form Subject"/>
+        <h3>сайт визитка</h3>
+        <p>Напишите нам какой сайт вы хотите заказать и мы свяжемся с вами в ближайшее время.</p>
+        <div class="feedback grid">
+          <input type="text" name="name" placeholder="name" id="name"/>
+          <input type="text" name="email" placeholder="email"/>
+          <textarea name="text" placeholder="ваши коментарии..."></textarea>
+          <input type="submit" value="отправить" id="send"/>
+        </div>
+      </form>
+      <form id="order2" class="grid mfp-hide">
+        <h3>landing page</h3>
+        <p>Напишите нам какой сайт вы хотите заказать и мы свяжемся с вами в ближайшее время.</p>
+        <div class="feedback grid">
+          <input type="name" placeholder="name" id="name"/>
+          <input type="email" placeholder="email"/>
+          <textarea name="text" placeholder="ваши коментарии..."></textarea>
+          <input type="button" value="отправить" id="send"/>
+        </div>
+      </form>
+      <form id="order3" class="grid mfp-hide">
+        <h3>корпоративный сайт</h3>
+        <p>Напишите нам какой сайт вы хотите заказать и мы свяжемся с вами в ближайшее время.</p>
+        <div class="feedback grid">
+          <input type="name" placeholder="name" id="name"/>
+          <input type="email" placeholder="email"/>
+          <textarea name="text" placeholder="ваши коментарии..."></textarea>
+          <input type="button" value="отправить" id="send"/>
+        </div>
+      </form>
+      <form id="order4" class="grid mfp-hide">
+        <h3>интернет магазин</h3>
+        <p>Напишите нам какой сайт вы хотите заказать и мы свяжемся с вами в ближайшее время.</p>
+        <div class="feedback grid">
+          <input type="name" placeholder="name" id="name"/>
+          <input type="email" placeholder="email"/>
+          <textarea name="text" placeholder="ваши коментарии..."></textarea>
+          <input type="button" value="отправить" id="send"/>
+        </div>
+      </form><br/>
       <div id="contact" class="contact grid">
         <h2>контакты</h2>
         <div class="contactbox grid">
@@ -180,6 +220,7 @@
     <!-- bower:js-->
     <script src="js/jquery/dist/jquery.js"></script>
     <script src="js/wow/dist/wow.js"></script>
+    <script src="js/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <!-- endbower-->
     <script src="js/main.js"></script>
     <!-- endbuild-->
