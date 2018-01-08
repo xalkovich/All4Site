@@ -22,7 +22,7 @@ $(document).ready(function() {
 		var target = $(this).attr('href');
 		$('html, body').animate({ scrollTop: $(target).offset().top - 90 }, 1000);
 	});
-	$('a[href^="#ckosts"]').click(function() {
+	$('a[href^="#costs"]').click(function() {
 		var target = $(this).attr('href');
 		$('html, body').animate({ scrollTop: $(target).offset().top - 90 }, 1000);
 	});
@@ -70,3 +70,25 @@ $(document).ready(function() {
 		return false;
 	});
 });
+
+// Сделать сайт это просто
+	$(document).ready(function(){
+		var boxred = $('.box:nth-of-type(1)');
+		var	boxyellow = $('.box:nth-of-type(2)');
+		var boxgreen = $('.box:nth-of-type(3)');
+
+		boxyellow.mouseover(function(){
+			boxred.css("background","red").fadeIn("slow");
+		});
+				boxyellow.mouseout(function(){
+				boxred.removeAttr("style");
+		});
+		boxgreen.mouseover(function(){
+			boxred.css("background","red");
+			boxyellow.css("background","#FFCF73").fadeIn(5000);
+		});
+				boxgreen.mouseout(function(){
+			boxred.removeAttr("style");
+			boxyellow.removeAttr("style");
+		});
+	})
