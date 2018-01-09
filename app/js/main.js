@@ -78,16 +78,17 @@ $(document).ready(function() {
 		var boxgreen = $('.box:nth-of-type(3)');
 
 		boxyellow.mouseover(function(){
-			boxred.css("background","red").fadeIn("slow");
+			boxred.css("background","#E7E453");
 		});
 				boxyellow.mouseout(function(){
 				boxred.removeAttr("style");
+
 		});
 		boxgreen.mouseover(function(){
-			boxred.css("background","red");
-			boxyellow.css("background","#FFCF73").fadeIn(5000);
+			boxred.css("background","#A4B650");
+			boxyellow.css("background","#A4B650");
 		});
-				boxgreen.mouseout(function(){
+			boxgreen.mouseout(function(){
 			boxred.removeAttr("style");
 			boxyellow.removeAttr("style");
 		});

@@ -4,6 +4,7 @@
 @import circle
 @import order
 
+
 textarea
 	resize: none
 
@@ -129,12 +130,11 @@ h2
 		grid-column: span 12
 		grid-template-columns: repeat(auto-fit,minmax(150px, 1fr))
 		.img
-			grid-column: span 3
+			grid-column: span 4
 			display: grid
 			align-items: stretch
 			position: relative
 			transition: all 1s
-
 .dosite
 	grid-column: span 12
 	grid-template-columns: repeat(12, 1fr)
@@ -167,20 +167,22 @@ h2
 				text-align: center
 				align-self: center
 				font-size: 3em
+				z-index: 1
 			span
 				margin-top: -25%
 				text-transform: uppercase
 				font-weight: 500
 				font-size: 1.5em
+				z-index: 1
 		.box:nth-of-type(1)
 			&:hover
-				background: #C6392E
+				background: #D99D26	
 		.box:nth-of-type(2)
 			&:hover
-				background: #FFCF73
+					background: #E7E453	
 		.box:nth-of-type(3)
-			&:hover
-				background: #10824E
+				&:hover
+					background: #A4B650 	
 .costs
 	grid-column: span 12
 	grid-template-columns: 12% repeat(4, 1fr) 12% 
@@ -248,6 +250,9 @@ h2
 		grid-column: 4
 	.costsall:nth-of-type(4)
 		grid-column: 5
+.action
+	color: red
+	font-weight: bold
 .contact
 	grid-column: span 12
 	background: url("../img/feedback.png")
@@ -284,6 +289,7 @@ h2
 		width: 70%
 		span
 			padding: 2px
+		a
 		.fa
 			align-self: center
 			color: $light
@@ -320,6 +326,9 @@ h2
 			justify-self: center
 		.cosial
 			grid-column: 11 /span 2
+			a
+				color: $darc
+				text-decoration: none
 			.fa
 				padding-left: 20px
 
