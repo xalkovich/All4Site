@@ -13,18 +13,50 @@ var gulp = require('gulp'),
 	pngquant = require('imagemin-pngquant'),
 	gulpif = require('gulp-if'),
 	wiredep = require('gulp-wiredep'),
-	useref = require('gulp-useref');
+	useref = require('gulp-useref'),
+	ftp = require('vinyl-ftp');
 
+gulp.task('ftp', function () {
 
-gulp.task('build', ['clean', 'img', 'jadebuild'], function () {
-	var buildFonts = gulp.src('app/fonts/**/*')
-		.pipe(gulp.dest('dist/fonts'))
-	var buildFonts = gulp.src('app/js/sass-font-awesome/fonts/*')
-		.pipe(gulp.dest('dist/fonts/'))
+    var conn = ftp.create({
+        host: 'rock.all4site.com.ua',
+        user: 'xalkall4site',
+        password: 'Kjpjdcrbq1',
+        parallel: 10,
+    });
+
+    var globs = [
+        'dist/**',
+        
+    ];
+
+    // using base = '.' will transfer everything to /public_html correctly
+    // turn off buffering in gulp.src for best performance
+
+    return gulp.src(globs, { base: './dist/', buffer: false })
+        .pipe(conn.newer('/www/all4site.com.ua')) // only upload newer files
+        .pipe(conn.dest('/www/all4site.com.ua'));
+
 });
 
+gulp.task('build', ['clean', 'img', 'jadebuild', 'test'], function () {
+	var buildFonts = gulp.src('app/fonts/**/*')
+		.pipe(gulp.dest('dist/fonts'))
+	var buildFonts = gulp.src('app/js/xalk-font-awesome/fonts/*')
+		.pipe(gulp.dest('dist/fonts/'))
+		return gulp.src('app/mail/mail.php')
+		.pipe(gulp.dest('dist/mail'))
+		return gulp.src('app/collback.html')
+		.pipe(gulp.dest('dist'))
+});
+
+gulp.task('test', function(){
+			return gulp.src(['app/*.html','!app/index.html'])
+		.pipe(gulp.dest('dist'))
+	});
+
 gulp.task('jadebuild', function () {
-	return gulp.src('app/*.jade')
+	return gulp.src('app/index.jade')
 		.pipe(jade({
 			pretty: true
 		}))

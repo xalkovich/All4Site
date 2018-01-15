@@ -1,40 +1,53 @@
 form#order1.grid.mfp-hide
-	input(type='hidden', name='project_name', value='All4site.com.ua')
-	input(type='hidden', name='admin_email', value='admin@mail.com')
-	input(type='hidden', name='form_subject', value='Form Subject')
+	input(type='hidden', name='project_name', value='Заказ сайта')
+	input(type='hidden', name='admin_email', value='info@all4site.com.ua')
+	input(type='hidden', name='form_subject', value='Форма заказа')
 
-	h3 сайт визитка
-	p.
-		Напишите нам какой сайт вы хотите заказать и мы свяжемся с вами в ближайшее время.
 	.feedback.grid
-		input(type="text" name="name" placeholder="name" id="name")
-		input(type="text" name="email" placeholder="email" )
-		textarea(name="text" placeholder="ваши коментарии...")
-		input(type="submit" value="отправить" id="send")
+		h3 сайт визитка
+		span.name ИМЯ
+		input(type="text" name="name" placeholder="name" id="name" required)
+		span.email EMAIL
+		input(type="text" name="email" placeholder="email" required)
+		textarea(name="Заказ" readonly) 
+			|	Сайт Взитка.
+		input(type="submit" value="заказать" )
 form#order2.grid.mfp-hide
-	h3 landing page
-	p.
-		Напишите нам какой сайт вы хотите заказать и мы свяжемся с вами в ближайшее время.
+	input(type='hidden', name='project_name', value='Заказ сайта')
+	input(type='hidden', name='admin_email', value='info@all4site.com.ua')
+	input(type='hidden', name='form_subject', value='Форма заказа')
 	.feedback.grid
-		input(type="name" placeholder="name" id="name")
-		input(type="email" placeholder="email")
-		textarea(name="text" placeholder="ваши коментарии...")
-		input(type="button" value="отправить" id="send")
+		h3 landing page
+		span.name ИМЯ
+		input(type="text" name="name" placeholder="name" id="name" required)
+		span.email EMAIL
+		input(type="text" name="email" placeholder="email" required)
+		textarea(name="Заказ" readonly)
+			| Landing Page.
+		input(type="submit" value="заказать")
 form#order3.grid.mfp-hide
-	h3 корпоративный сайт
-	p.
-		Напишите нам какой сайт вы хотите заказать и мы свяжемся с вами в ближайшее время.
+	input(type='hidden', name='project_name', value='Заказ сайта')
+	input(type='hidden', name='admin_email', value='info@all4site.com.ua')
+	input(type='hidden', name='form_subject', value='Форма заказа')
 	.feedback.grid
-		input(type="name" placeholder="name" id="name")
-		input(type="email" placeholder="email")
-		textarea(name="text" placeholder="ваши коментарии...")
-		input(type="button" value="отправить" id="send")
+		h3 корпоративный сайт
+		span.name ИМЯ
+		input(type="text" name="name" placeholder="name" id="name" required)
+		span.email EMAIL
+		input(type="text" name="email" placeholder="email" required)
+		textarea(name="Заказ" readonly)
+			|	Корпоративный сайт.
+		input(type="submit" value="заказать")
 form#order4.grid.mfp-hide
-	h3 интернет магазин
-	p.
-		Напишите нам какой сайт вы хотите заказать и мы свяжемся с вами в ближайшее время.
+	input(type='hidden', name='project_name', value='Заказ сайта')
+	input(type='hidden', name='admin_email', value='info@all4site.com.ua')
+	input(type='hidden', name='form_subject', value='Форма заказа')
 	.feedback.grid
-		input(type="name" placeholder="name" id="name")
-		input(type="email" placeholder="email")
-		textarea(name="text" placeholder="ваши коментарии...")
-		input(type="button" value="отправить" id="send")
+		h3 интернет магазин
+		span.name ИМЯ
+		input(type="text" name="name" placeholder="name" id="name" required)
+		span.email EMAIL
+		input(type="text" name="email" placeholder="email" required)
+		textarea(name="Заказ" readonly)
+			| Интернет магзин.
+		input(type="submit" value="заказать")

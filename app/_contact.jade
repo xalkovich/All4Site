@@ -10,17 +10,20 @@
 			a(href="https://www.facebook.com/allsorsite.allforsite.5" target="_blank")
 				.fa.fa-facebook
 			span Google+: 
-			a(href="https://https://plus.google.com/u/3/102129154624473947007" target="_blank")
+			a(href="https://plus.google.com/u/3/102129154624473947007" target="_blank")
 				.fa.fa-google-plus
 			span Youtube:
 			a(href="https://www.youtube.com/channel/UCDv1CAqSLEI0YbWfOjhQqfQ?view_as=subscriber" target="_blank")
 				.fa.fa-youtube
 		.hrfeedback
-		.feedback.grid
-			input(type="name" value="name")
-			input(type="email" value="email")
+		form#test.feedback.grid
+			input(type='hidden', name='project_name', value='Обратная связь')
+			input(type='hidden', name='admin_email', value='info@all4site.com.ua')
+			input(type='hidden', name='form_subject', value='Форма обратной связи')
+			input(type="text" name="name" placeholder="name" required)
+			input(type="text" name="email" placeholder="email" required)
 			textarea(name="text" placeholder="text...")
-			input(type="button" value="отправить")
+			input(type="submit" value="отправить")
 	footer.grid
 		span 2017 all4site.com.ua
 		span 093-606-34-15

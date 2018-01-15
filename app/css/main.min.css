@@ -91,7 +91,7 @@ input[type="hidden"] {
 #order2,
 #order3,
 #order4 {
-  height: 50vh;
+  height: 40%;
   background: #afb2b7;
   margin-left: 32%;
   margin-right: 33%;
@@ -116,12 +116,49 @@ input[type="hidden"] {
   #order2 .feedback,
   #order3 .feedback,
   #order4 .feedback {
-    grid-template-rows: repeat(4, -webkit-min-content);
-    grid-template-rows: repeat(4, min-content);
+    grid-template-rows: repeat(6, -webkit-min-content);
+    grid-template-rows: repeat(6, min-content);
     grid-row-gap: 5px;
     width: 90%;
     justify-self: center;
-    margin-bottom: 1%; }
+    margin-bottom: 55%; }
+    #order1 .feedback h3,
+    #order2 .feedback h3,
+    #order3 .feedback h3,
+    #order4 .feedback h3 {
+      grid-row: 1;
+      height: auto; }
+    #order1 .feedback span.name,
+    #order2 .feedback span.name,
+    #order3 .feedback span.name,
+    #order4 .feedback span.name {
+      grid-row: 2;
+      text-align: left; }
+    #order1 .feedback input[name=name],
+    #order2 .feedback input[name=name],
+    #order3 .feedback input[name=name],
+    #order4 .feedback input[name=name] {
+      grid-row: 3; }
+    #order1 .feedback span.email,
+    #order2 .feedback span.email,
+    #order3 .feedback span.email,
+    #order4 .feedback span.email {
+      grid-row: 4;
+      text-align: left; }
+    #order1 .feedback input[name="email"],
+    #order2 .feedback input[name="email"],
+    #order3 .feedback input[name="email"],
+    #order4 .feedback input[name="email"] {
+      grid-row: 5; }
+    #order1 .feedback input[type="submit"],
+    #order2 .feedback input[type="submit"],
+    #order3 .feedback input[type="submit"],
+    #order4 .feedback input[type="submit"] {
+      grid-row: 6;
+      margin-top: 5%;
+      padding: 20px;
+      width: 50%;
+      justify-self: center; }
     #order1 .feedback input,
     #order2 .feedback input,
     #order3 .feedback input,
@@ -133,6 +170,7 @@ input[type="hidden"] {
     #order2 .feedback textarea,
     #order3 .feedback textarea,
     #order4 .feedback textarea {
+      display: none;
       height: 200px;
       color: #7f8084;
       border: none; }
@@ -250,9 +288,10 @@ h2 {
   .section article {
     grid-column: 2/span 4;
     font-size: 1.2em;
-    text-indent: 10px; }
+    text-indent: 20px; }
     .section article p {
-      margin-top: 0; }
+      margin-top: 0;
+      font-style: italic; }
   .section .photo {
     grid-column: 8/span 4;
     justify-self: end; }
@@ -286,7 +325,8 @@ h2 {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
     -webkit-transition: 1s;
-    transition: 1s; }
+    transition: 1s;
+    margin-top: -8px; }
     .portfolio img:hover {
       -webkit-filter: grayscale(0%);
               filter: grayscale(0%); }
@@ -306,6 +346,22 @@ h2 {
       position: relative;
       -webkit-transition: all 1s;
       transition: all 1s; }
+      .portfolio .portfolioimg .img a {
+        position: relative; }
+        .portfolio .portfolioimg .img a::before {
+          content: '';
+          position: absolute;
+          width: 15%;
+          height: 15%;
+          left: 45%;
+          top: 45%;
+          background: url("../img/download.svg") no-repeat;
+          z-index: 1;
+          opacity: 0; }
+        .portfolio .portfolioimg .img a:hover::before {
+          -webkit-transition: 1s;
+          transition: 1s;
+          opacity: 1; }
 
 .dosite {
   grid-column: span 12;
@@ -440,7 +496,8 @@ h2 {
 .contact {
   grid-column: span 12;
   background: url("../img/feedback.png");
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  margin-top: 1vh; }
   .contact h2 {
     text-align: center;
     color: #f3f3f3;
@@ -494,7 +551,7 @@ h2 {
       height: 150px;
       color: #7f8084;
       border: none; }
-    .contact .feedback input[type="button"] {
+    .contact .feedback input[type="submit"] {
       width: 150px;
       justify-self: end;
       color: #7f8084;
@@ -519,6 +576,36 @@ h2 {
         text-decoration: none; }
       .contact footer .cosial .fa {
         padding-left: 20px; }
+
+.orderform {
+  background-image: url("../img/background.jpeg");
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  position: relative; }
+  .orderform::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #262526;
+    opacity: 0.6; }
+  .orderform h2 {
+    grid-column: span 12;
+    justify-self: center;
+    -ms-flex-item-align: end;
+        align-self: end;
+    z-index: 1;
+    font-size: 5em; }
+  .orderform p {
+    grid-column: span 12;
+    justify-self: center;
+    -ms-flex-item-align: start;
+        align-self: start;
+    z-index: 1;
+    font-size: 2em; }
 
 @media only screen and (max-width: 1280px) {
   .portfolio .portfolioimg .img {

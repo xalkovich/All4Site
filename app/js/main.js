@@ -49,12 +49,35 @@ $(document).ready(function() {
 	});
 });
 
-// Почта
+// Почта заказ
 $(document).ready(function() {
 	//E-mail Ajax Send
-	$("form").submit(function() { //Change
+	$("#order1, #order2, #order3, #order4").submit(function() { //Change
 		var th = $(this);
-		var win = window.open('http://google.com.ua');
+		var win = window.open('http://all4site.com.ua/waight.html');
+		$.ajax({
+			type: "POST",
+			url: "mail/mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			win;
+			setTimeout(function() {
+				// Done Functions
+				win.close();
+				location.reload();
+				th.trigger("reset");
+			}, 5000);
+		});
+		return false;
+	});
+});
+
+// Обратная связь
+$(document).ready(function() {
+	//E-mail Ajax Send
+	$("#test").submit(function() { //Change
+		var th = $(this);
+		var win = window.open('http://all4site.com.ua/collback.html');
 		$.ajax({
 			type: "POST",
 			url: "mail/mail.php", //Change
@@ -65,31 +88,31 @@ $(document).ready(function() {
 				// Done Functions
 				win.close();
 				th.trigger("reset");
-			}, 3000);
+			}, 5000);
 		});
 		return false;
 	});
 });
 
 // Сделать сайт это просто
-	$(document).ready(function(){
-		var boxred = $('.box:nth-of-type(1)');
-		var	boxyellow = $('.box:nth-of-type(2)');
-		var boxgreen = $('.box:nth-of-type(3)');
+$(document).ready(function(){
+	var boxred = $('.box:nth-of-type(1)');
+	var	boxyellow = $('.box:nth-of-type(2)');
+	var boxgreen = $('.box:nth-of-type(3)');
 
-		boxyellow.mouseover(function(){
-			boxred.css("background","#E7E453");
-		});
-				boxyellow.mouseout(function(){
-				boxred.removeAttr("style");
+	boxyellow.mouseover(function(){
+		boxred.css("background","#E7E453");
+	});
+	boxyellow.mouseout(function(){
+		boxred.removeAttr("style");
 
-		});
-		boxgreen.mouseover(function(){
-			boxred.css("background","#A4B650");
-			boxyellow.css("background","#A4B650");
-		});
-			boxgreen.mouseout(function(){
-			boxred.removeAttr("style");
-			boxyellow.removeAttr("style");
-		});
-	})
+	});
+	boxgreen.mouseover(function(){
+		boxred.css("background","#A4B650");
+		boxyellow.css("background","#A4B650");
+	});
+	boxgreen.mouseout(function(){
+		boxred.removeAttr("style");
+		boxyellow.removeAttr("style");
+	});
+})
